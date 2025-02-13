@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <!-- Background leaf pattern -->
+  <path d="M50 100 C50 60, 90 60, 90 100 C90 140, 50 140, 50 100" fill="#00B207" opacity="0.2"/>
+  <path d="M310 100 C310 60, 350 60, 350 100 C350 140, 310 140, 310 100" fill="#00B207" opacity="0.2"/>
+  
+  <!-- Main text -->
+  <text x="200" y="110" font-family="Arial" font-size="48" font-weight="bold" text-anchor="middle" fill="#00B207">
+    Herbal-Hetal
+  </text>
+  
+  <!-- Decorative leaves -->
+  <path d="M160 70 C160 50, 180 50, 180 70 C180 90, 160 90, 160 70" fill="#00B207"/>
+  <path d="M220 70 C220 50, 240 50, 240 70 C240 90, 220 90, 220 70" fill="#00B207"/>
+  
+  <!-- Smaller leaf details -->
+  <path d="M150 120 C150 110, 160 110, 160 120 C160 130, 150 130, 150 120" fill="#00B207" opacity="0.6"/>
+  <path d="M240 120 C240 110, 250 110, 250 120 C250 130, 240 130, 240 120" fill="#00B207" opacity="0.6"/>
+</svg>
