@@ -24,7 +24,7 @@ const navigations = [
 const Menubar = () => {
 
     return (
-        <HStack justifyContent="space-between" bgColor="#f2f2f2" px="6rem" py={2}>
+        <HStack position="sticky" top={"140px"} justifyContent="space-between" bgColor="#f2f2f2" px="6rem" py={2}>
             <HStack gap={8} width="70%">
                 <MenuRoot>
                     <MenuTrigger asChild>
@@ -44,19 +44,21 @@ const Menubar = () => {
                     </MenuContent>
                 </MenuRoot>
 
-                <HStack gap={3} spacing={6}>
+                <HStack gap={7} spacing={6}>
                     {navigations.map((item) => (
 
                         <HStack gap={1} key={item.id} spacing={1}>
-                            <Text _hover={{ color: "#00B207", cursor: "pointer", fontWeight: 600 }} color="#808080" fontSize="sm" fontWeight={500} >{item.navName}</Text>
-                            {item.hasDropdown && <MdKeyboardArrowDown color="black" />}
+                            <NavLink to={item.path}>
+                                <Text _hover={{ color: "#00B207", cursor: "pointer", fontWeight: 600 }} color="#808080" fontSize="xs" fontWeight={500} >{item.navName}</Text>
+                            </NavLink>
+                            {/* {item.hasDropdown && <MdKeyboardArrowDown color="black" />} */}
                         </HStack>
                     ))}
                 </HStack>
             </HStack>
             <HStack>
                 <LuPhoneCall size={"20px"} color='#000' />
-                <Text fontWeight={800} fontSize="sm" color="#000">(219) 555-0114</Text>
+                <Text fontWeight={800} fontSize="xs" color="#000">(219) 555-0114</Text>
             </HStack>
         </HStack>
     )
