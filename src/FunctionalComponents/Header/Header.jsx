@@ -9,12 +9,12 @@ import { InputGroup } from "../../components/ui/input-group";
 const Header = () => {
   return (
     <VStack position="sticky" top="0" bgColor="white" color="#666666" w="100%" >
-      <HStack px="6rem" py={3} w="100%" justifyContent="space-between">
-        <HStack cursor="pointer" ><CiLocationOn /> <Text as="span" fontSize="x-small" >Store Location: Lincoln- 344, Illinois, Chicago, USA</Text></HStack>
-        <HStack ><Text _hover={{ color: "blue", textDecoration: "underline" }} cursor="pointer" as="span" fontSize="x-small" >Sign in</Text> <Text as="span" fontSize="x-small" >/</Text> <Text as="span" fontSize="x-small" cursor="pointer" _hover={{ color: "blue", textDecoration: "underline" }}  >Sign Up</Text></HStack>
+      <HStack bgColor="#333333" px="6rem" py={3} w="100%" justifyContent="space-between">
+        <HStack cursor="pointer" ><CiLocationOn color="#B3B3B3" /> <Text as="span" fontSize="x-small" color="#B3B3B3" >Store Location: Lincoln- 344, Illinois, Chicago, USA</Text></HStack>
+        <HStack color="#B3B3B3" ><Text _hover={{ color: "blue", textDecoration: "underline" }} cursor="pointer" as="span" fontSize="x-small" >Sign in</Text> <Text as="span" fontSize="x-small" >/</Text> <Text as="span" fontSize="x-small" cursor="pointer" _hover={{ color: "blue", textDecoration: "underline" }}  >Sign Up</Text></HStack>
       </HStack>
-      <HStack px="5rem" py={1} w="100%" borderTop="0.5px solid #E5E5E5" justifyContent="space-between" >
-        <Box w="auto" h="74px" ><Image src={HetalLogo} h="100%" w="100%" /></Box>
+      <HStack px="5rem"  w="100%"  justifyContent="space-between" >
+        <Box w="auto" h="84px" ><Image  src={HetalLogo} h="100%" w="100%" /></Box>
         <HStack w="28%" >
           <InputGroup
             flex="1"
@@ -27,7 +27,7 @@ const Header = () => {
 
         <Flex align="center" gap={4}>
           {/* Wishlist Icon */}
-          <Image src={Heart} h="24px" />
+          <Image  src={Heart} h="24px" />
 
           {/* Divider */}
           <Box w="1px" h="24px" bg="gray.300" />

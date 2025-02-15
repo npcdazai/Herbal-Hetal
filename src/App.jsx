@@ -1,12 +1,14 @@
+import { Box } from "@chakra-ui/react"
 import Header from "./FunctionalComponents/Header/Header"
+import Menubar from "./FunctionalComponents/Menubar"
 
 
 const App = () => {
   return (
-    <div>
+    <Box bgColor="#fff" h="100vh" >
       <Header />
-      
-    </div>
+      <Menubar/>
+    </Box>
   )
 }
 
