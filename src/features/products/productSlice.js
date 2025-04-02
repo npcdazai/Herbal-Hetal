@@ -1,33 +1,34 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { useEffect } from "react";
 
-const initailState = {
-  products: [{ id: 1, text: "hello" }],
-};
-
-export const productSlice = createSlice({
-  name: "product_Slice",
-  initailState,
-  reducers: {
-    getProducts: (state, action) => {
-      const fetchProducts = async () => {
-        try {
-          const response = await axios.get("https://dummyjson.com/products");
-          const responseData = response.data;
-          state.products.push(responseData);
-        } catch (err) {
-          console.log("====================================");
-          console.log(err);
-          console.log("====================================");
-        }
-      };
-      fetchProducts();
-    },
-    addToCart: (state, action) => {},
-  },
+export const fetchProducts = createAsyncThunk("fetchProducts", async () => {
+  const response = await axios.get("https://dummyjson.com/products");
+  const data = response.data;
+  return data;
 });
 
-export const { getProducts, addToCart } = productSlice.actions;
+const productSlice = createSlice({
+  name: "product_slices",
+  initialState: {
+    isLoading: false,
+    productData: null,
+    isError: false,
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchProducts.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.productData = action.payload;
+    });
+
+    builder.addCase(fetchProducts.pending, (state, action) => {
+      state.isLoading = true;
+    });
+
+    builder.addCase(fetchProducts.rejected, (state, action) => {
+      console.warn("Error", action.payload);
+      state.isError = true;
+    });
+  },
+});
 
 export default productSlice.reducer;

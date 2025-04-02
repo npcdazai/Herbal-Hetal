@@ -1,14 +1,13 @@
-import { Box, Heading, VStack } from '@chakra-ui/react'
+import { Box, Button, Heading, VStack } from '@chakra-ui/react'
 import React from 'react'
 import MainFrame from '../MainFrame'
 import CategoryTabs from '../../FunctionalComponents/CategoryTabs'
 import Menubar from "../../FunctionalComponents/Menubar"
 import { useDispatch, useSelector } from "react-redux"
-
+import { fetchProducts } from "../../features/products/productSlice"
 
 const Products = () => {
-  const productData = useSelector(state => state.products)
-  const dispatch = useDispatch();
+  const disptach = useDispatch();
 
   return (
     <MainFrame>
@@ -16,6 +15,8 @@ const Products = () => {
         <Heading mt={4} fontSize="xx-large" fontWeight={600} >Introducing Our Products</Heading>
         {/* <CategoryTabs/> */}
         <Menubar />
+
+        <Button onClick={e => disptach(fetchProducts())} >HELLO DATA</Button>
       </VStack>
     </MainFrame>
   )
