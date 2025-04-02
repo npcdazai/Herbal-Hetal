@@ -11,22 +11,19 @@ import {
     MenuTrigger,
 } from "../components/ui/menu"
 
-
 const navigations = [
-    { id: 1, navName: "Home", hasDropdown: true, path: "/" },
-    { id: 2, navName: "Shop", hasDropdown: true, path: "/shop" },
-    { id: 3, navName: "Pages", hasDropdown: true, path: "/pages" },
-    { id: 4, navName: "Blog", hasDropdown: true, path: "/blog" },
-    { id: 5, navName: "About Us", hasDropdown: false, path: "/about" },
-    { id: 6, navName: "Contact Us", hasDropdown: false, path: "/contact" },
+    { id: 1, navName: "Beauty", hasDropdown: true, path: "/" },
+    { id: 2, navName: "Fragrances", hasDropdown: true, path: "/shop" },
+    { id: 3, navName: "Furniture", hasDropdown: true, path: "/pages" },
+    { id: 4, navName: "Groceries", hasDropdown: true, path: "/blog" },
 ];
 
 const Menubar = () => {
 
     return (
-        <HStack position="sticky" top={"140px"} justifyContent="space-between" bgColor="#f2f2f2" px="6rem" py={2}>
+        <HStack w="100%" position="sticky" top={"130px"} justifyContent="space-between" bgColor="#f2f2f2" px="6rem" py={2}>
             <HStack gap={8} width="70%">
-                <MenuRoot>
+                {/* <MenuRoot>
                     <MenuTrigger asChild>
                         <Button borderRadius="none" color="#fff" fontSize="xs" bgColor="#00B207" >
                             <IoMenu />
@@ -42,7 +39,7 @@ const Menubar = () => {
                         <MenuItem _hover={{ bgColor: "#00B207", color: "#fff" }} color="#1A1A1A" value="export">Drink & Water</MenuItem>
                         <MenuItem _hover={{ bgColor: "#00B207", color: "#fff" }} color="#1A1A1A" value="import">Yogurt & Ice Cream</MenuItem>
                     </MenuContent>
-                </MenuRoot>
+                </MenuRoot> */}
 
                 <HStack gap={7} spacing={6}>
                     {navigations.map((item) => (

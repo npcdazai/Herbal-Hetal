@@ -1,8 +1,8 @@
 import { Badge, Box, Button, Flex, HStack, Image, Input, Text, VStack } from '@chakra-ui/react';
 import { CiLocationOn } from "react-icons/ci";
-import { IoSearchOutline } from 'react-icons/io5';
-import HetalLogo from "../../../public/herbal-hetal-logo.svg";
+import { IoSearchOutline } from 'react-icons/io5';;
 import Heart from "../../assets/icons/Heart.svg";
+import BrainedLogo from "../../../public/brained.svg";
 import Bag from "../../assets/icons/Rectangle.svg";
 import { InputGroup } from "../../components/ui/input-group";
 
@@ -14,7 +14,7 @@ const Header = () => {
         <HStack color="#B3B3B3" ><Text _hover={{ color: "blue", textDecoration: "underline" }} cursor="pointer" as="span" fontSize="x-small" >Sign in</Text> <Text as="span" fontSize="x-small" >/</Text> <Text as="span" fontSize="x-small" cursor="pointer" _hover={{ color: "blue", textDecoration: "underline" }}  >Sign Up</Text></HStack>
       </HStack>
       <HStack px="5rem"  w="100%"  justifyContent="space-between" >
-        <Box w="auto" h="84px" ><Image  src={HetalLogo} h="100%" w="100%" /></Box>
+        <Box w="auto" h="84px" ><Image  src={BrainedLogo} h="80%" w="100%" /></Box>
         <HStack w="28%" >
           <InputGroup
             flex="1"

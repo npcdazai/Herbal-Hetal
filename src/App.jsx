@@ -1,6 +1,5 @@
 import { Box } from "@chakra-ui/react"
 import Header from "./FunctionalComponents/Header/Header"
-import Menubar from "./FunctionalComponents/Menubar"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import Error from "./pages/Error"
@@ -11,7 +10,7 @@ const App = () => {
     <Box bgColor="#fff" >
       <BrowserRouter>
         <Header />
-        <Menubar />
+       
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="*" element={<Error/>}/>
@@ -22,3 +21,5 @@ const App = () => {
 }
 
 export default App
+
+  
