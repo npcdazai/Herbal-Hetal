@@ -29,18 +29,13 @@ const Header = () => {
         </HStack>
 
         <Flex align="center" gap={4}>
-          {/* Wishlist Icon */}
-          <Image  src={Heart} h="24px" />
+       
 
-          {/* Divider */}
-          <Box w="1px" h="24px" bg="gray.300" />
 
           {/* Shopping Cart */}
           <Flex align="center" position="relative" gap={2}>
-            {/* Cart Icon */}
             <Image src={Bag} h="24px" />
 
-            {/* Badge for item count */}
             <Badge
               position="absolute"
               top="-5px"
