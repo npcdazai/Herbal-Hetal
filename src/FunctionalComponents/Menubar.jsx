@@ -21,7 +21,7 @@ const navigations = [
 const Menubar = () => {
 
     return (
-        <HStack w="100%" position="sticky" top={"130px"} justifyContent="space-between" bgColor="#f2f2f2" px="6rem" py={2}>
+        <HStack zIndex={50} w="100%" position="sticky" top={"130px"} justifyContent="space-between" bgColor="#f2f2f2" px="6rem" py={2}>
             <HStack gap={8} width="70%">
                 {/* <MenuRoot>
                     <MenuTrigger asChild>

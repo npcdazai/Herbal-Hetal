@@ -8,7 +8,7 @@ import { InputGroup } from "../../components/ui/input-group";
 
 const Header = () => {
   return (
-    <VStack position="sticky" top="0" bgColor="white" color="#666666" w="100%" >
+    <VStack zIndex={100} position="sticky" top="0" bgColor="white" color="#666666" w="100%" >
       <HStack bgColor="#333333" px="6rem" py={3} w="100%" justifyContent="space-between">
         <HStack cursor="pointer" ><CiLocationOn color="#B3B3B3" /> <Text as="span" fontSize="x-small" color="#B3B3B3" >Store Location: Lincoln- 344, Illinois, Chicago, USA</Text></HStack>
         <HStack color="#B3B3B3" ><Text _hover={{ color: "blue", textDecoration: "underline" }} cursor="pointer" as="span" fontSize="x-small" >Sign in</Text> <Text as="span" fontSize="x-small" >/</Text> <Text as="span" fontSize="x-small" cursor="pointer" _hover={{ color: "blue", textDecoration: "underline" }}  >Sign Up</Text></HStack>
